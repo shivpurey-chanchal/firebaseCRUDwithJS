@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h3>List memeber</h3>
+        </header>
+        <div class="table-wrapper">
+            <table class="table-users">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+            <button class="btn btn-add">Add User</button>
+        </div>
+        <!-- model add -->
+        <div class="add-modal modal-wrappper">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Add New User</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form" autocomplete="off">
+                        <input type="text" name="firstName" id="" placeholder="First Name...">
+                        <input type="text" name="lastName" id="" placeholder="Last Name...">
+                        <input type="number" name="phone" id="" placeholder="Phone number...">
+                        <input type="email" name="email" id="" placeholder="email...">
+                        <button class="btn btn-modal">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- model edit -->
+        <div class="edit-modal modal-wrappper">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Edit User</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form" autocomplete="off">
+                        <input type="text" name="firstName" id="" placeholder="First Name...">
+                        <input type="text" name="lastName" id="" placeholder="Last Name...">
+                        <input type="number" name="phone" id="" placeholder="Phone number...">
+                        <input type="email" name="email" id="" placeholder="email...">
+                        <button class="btn btn-modal">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA-qJGLfSjVn6IaEmPrUNwyIZ9V29bIEXY",
+            authDomain: "crudwithjs-435b8.firebaseapp.com",
+            projectId: "crudwithjs-435b8",
+            storageBucket: "crudwithjs-435b8.appspot.com",
+            messagingSenderId: "236346835361",
+            appId: "1:236346835361:web:20904297c7b4df82070be0"
+        };
+        // Initialize Firebase
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore()
+    </script>
+    <script src='script.js'></script>
+</body>
+
+</html>
